@@ -90,7 +90,7 @@ class GradientDescent:
         if len(grad) == 1:
             grad = grad[0]
         self.a -= (learning_rate * grad)
-        if (self.a_min is not None) or (self.a_min is not None):
+        if (self.a_min is not None) or (self.a_max is not None):
             self.a = np.clip(self.a, self.a_min, self.a_max)
     
     def update_G(self, grad):
